@@ -11,10 +11,10 @@ public class BruteForce
     {
     	
         int longest = 0;
-        for(int i = 0; i < arrayOfIntegers.length - 1; i++){
+        for(int i = 0; i < arrayOfIntegers.length; i++){
             int count = 0;
             boolean nextPresent = false;
-            for(int j = 0; j < arrayOfIntegers.length - 1; j++){
+            for(int j = 0; j < arrayOfIntegers.length; j++){
                 if(arrayOfIntegers[j] == arrayOfIntegers[i]){
                     count++;
                 } 

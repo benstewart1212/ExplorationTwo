@@ -16,7 +16,7 @@ public class Hashing
         HashMap<Integer, Integer> H = new HashMap<>(a.length);
         
       
-        for(int value = 0; value < a.length - 1; value++)
+        for(int value = 0; value < a.length; value++)
         {
             H.put(value, H.getOrDefault(value,0) + 1);
         }

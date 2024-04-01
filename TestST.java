@@ -28,8 +28,10 @@ public class TestST
 	        
 	        Instant finish = Instant.now();
 	        long timeElapsed = Duration.between(start, finish).toNanos();
-	        System.out.print("Time Elapsed: ");
-	        System.out.println(timeElapsed);
+			//Convert to milliseconds
+			double timeElapsedMs = (double) timeElapsed / 1000000.0;
+	        System.out.println("Time Elapsed: " + timeElapsedMs);
+
 	        
 	        
 	    }
