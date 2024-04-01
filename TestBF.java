@@ -1,8 +1,51 @@
-import java.time.*;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.Random;
+public class TestBF 
+{
+	public static void main(String [] args)
+	{
+		test(10);
+		test(100);
+		test(1000);
+		test(10000);
+		test(100000);
+		
+		
+	}
+	
+	public static void test(int length)
+	{
+		
+		int [] arrayOfIntegers = randomArray(length);
+		BruteForce bruteforce = new BruteForce();
+		
+		
+		Instant start = Instant.now();
+		
+		int result = bruteforce.BruteForceNearlyIdentical(arrayOfIntegers);
+        
+        Instant finish = Instant.now();
+        long timeElapsed = Duration.between(start, finish).toNanos();
+        System.out.print("Result: " + result + ", ");
+        System.out.print("Time Elapsed: ");
+        System.out.println(timeElapsed);
+        
+        
+	}
+	
+	public static int [] randomArray(int length)
+	{
+		int [] a = new int[length];
+		Random random = new Random();
+		for(int i = 0; i < a.length; i++)
+		{
+			a[i] = random.nextInt(10) + 1;
+		}
+		
+		
+		
+		return a;
+	}
 
-public class TestBF {
-    Instant start = Instant.now();
-
-    Instant finish = Instant.now();
-    long timeElapsed = Duration.between(start,finish).toNanos();
 }
